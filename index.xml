@@ -1,4 +1,7 @@
-<!DOCTYPE html>
+<Module>
+<ModulePrefs title="ovo 3"/>
+<Content type="html">
+<![CDATA[ <!DOCTYPE html>
 <html>
 
 <head>
@@ -112,4 +115,6 @@
         'cp_cl': '8'
     })
 </script>
-</html>
+</html> ]]>
+</Content>
+</Module>
