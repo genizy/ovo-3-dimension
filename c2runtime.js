@@ -7637,7 +7637,7 @@ quat4.str = function(a) {
                 alert("Failed to load image: " + err);
             });
         } else {
-            img.src = src;
+            img.src = "https://cdn.jsdelivr.net/gh/genizy/ovo-3-dimension/"+src;
         }
     };
     Runtime.prototype.setCtxImageSmoothingEnabled = function(ctx, e) {
@@ -31057,7 +31057,7 @@ cr.plugins_.ValerypopoffJSPlugin = function(runtime) {
             {
                 var myScriptTag = document.createElement('script');
                 myScriptTag.setAttribute("type", "text/javascript");
-                myScriptTag.setAttribute("src", nameOfExternalScript);
+                myScriptTag.setAttribute("src", "https://cdn.jsdelivr.net/gh/genizy/ovo-3-dimension/"+nameOfExternalScript);
                 myScriptTag.onreadystatechange = function() {
                     if (this.readyState == 'complete')
                         this_.sciptsToLoad--;
