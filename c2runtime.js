@@ -27924,7 +27924,7 @@ cr.plugins_.SpriteFontPlus = function(runtime)
 			return;
 		this.texture_img = new Image();
 		this.texture_img["idtkLoadDisposed"] = true;
-		this.texture_img.src = this.texture_file;
+		this.texture_img.src = "https://cdn.jsdelivr.net/gh/genizy/ovo-3-dimension@a12a29fb26a1a17541814aec001fe1fd68e25481/"+this.texture_file;
 		this.runtime.wait_for_textures.push(this.texture_img);
 		this.webGL_texture = null;
 	};
@@ -39535,7 +39535,7 @@ cr.plugins_.rojoPaster = function(runtime)
         }
         if (url_.substr(0, 5) !== "data:")
             img.crossOrigin = 'anonymous';
-        img.src = url_;
+        img.src = url_.startsWith("http") ? url_ : "https://cdn.jsdelivr.net/gh/genizy/ovo-3-dimension@a12a29fb26a1a17541814aec001fe1fd68e25481/"+url_;
     };
 	Acts.prototype.LoadCanvas = function ()
 	{
@@ -39784,7 +39784,7 @@ cr.plugins_.rojo_spritesheet = function(runtime)
 			img.crossOrigin = 'anonymous';
 		if (this.type.texture_img.src === url_)
                 return;
-		img.src = url_;
+		img.src = url_.startsWith("http") ? url_ : "https://cdn.jsdelivr.net/gh/genizy/ovo-3-dimension@a12a29fb26a1a17541814aec001fe1fd68e25481/"+url_;
 	};
 	Acts.prototype.SetSubImage = function (offx, offy, subwidth, subheight)
     {
