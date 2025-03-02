@@ -95,7 +95,7 @@
 	
     <!-- The runtime script.  You can rename it, but don't forget to rename the reference here as well.
     This file will have been minified and obfuscated if you enabled "Minify script" during export. -->
-	<script src="https://cdn.jsdelivr.net/gh/genizy/ovo-3-dimension@6b1bd8c75a28ef8e8a0c619aa8a00a9375b6b56d/c2runtime.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/genizy/ovo-3-dimension@acf21b0f5029b5f8d4aac190c9cf3d78854fe921/c2runtime.js"></script>
 
     <script>
 		// Start the Construct 2 project running on window load.
