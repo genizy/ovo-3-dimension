@@ -1,115 +1,144 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <title>OvO Dimensions</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-    <link rel="apple-touch-icon" sizes="256x256" href="https://cdn.jsdelivr.net/gh/genizy/ovo-3-dimension@7c7f443f0936949c20b18f812683c7b870666845/icon-256.png" />
-    <meta name="HandheldFriendly" content="true" />
-    <meta name="mobile-web-app-capable" content="yes" />
-    <link rel="shortcut icon" sizes="256x256" href="https://cdn.jsdelivr.net/gh/genizy/ovo-3-dimension@7c7f443f0936949c20b18f812683c7b870666845/icon-256.png" />
-    <style type="text/css">
-        * {
-            padding: 0;
-            margin: 0;
-        }
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<title>OvO Dimensions</title>
+	<meta name="robots" content="noindex,nofollow" />
+	
+	<!-- Standardised web app manifest -->
+	<link rel="manifest" href="https://cdn.jsdelivr.net/gh/genizy/ovo-3-dimension@ce4e2eb95b5cbefe2d88debb4cf75968eb5e9fd0/appmanifest.json" />
+	
+	<!-- Allow fullscreen mode on iOS devices. (These are Apple specific meta tags.) -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<link rel="apple-touch-icon" sizes="256x256" href="https://cdn.jsdelivr.net/gh/genizy/ovo-3-dimension@ce4e2eb95b5cbefe2d88debb4cf75968eb5e9fd0/icon-256.png" />
+	<meta name="HandheldFriendly" content="true" />
+	
+	<!-- Chrome for Android web app tags -->
+	<meta name="mobile-web-app-capable" content="yes" />
+	<link rel="shortcut icon" sizes="256x256" href="https://cdn.jsdelivr.net/gh/genizy/ovo-3-dimension@ce4e2eb95b5cbefe2d88debb4cf75968eb5e9fd0/icon-256.png" />
 
-        html,
-        body {
-            background: #000;
-            color: #fff;
-            overflow: hidden;
-            touch-action: none;
-            -ms-touch-action: none;
-        }
-
-        canvas {
-            touch-action-delay: none;
-            touch-action: none;
-            -ms-touch-action: none;
-        }
+    <!-- All margins and padding must be zero for the canvas to fill the screen. -->
+	<style type="text/css">
+		* {
+			padding: 0;
+			margin: 0;
+		}
+		html, body {
+			background: #000;
+			color: #fff;
+			overflow: hidden;
+			touch-action: none;
+			-ms-touch-action: none;
+		}
+		canvas {
+			touch-action-delay: none;
+			touch-action: none;
+			-ms-touch-action: none;
+		}
     </style>
-    <link href="https://cdn.jsdelivr.net/gh/genizy/ovo-3-dimension@7c7f443f0936949c20b18f812683c7b870666845/animate.css" rel="stylesheet" type="text/css" />
-    <link href="https://cdn.jsdelivr.net/gh/genizy/ovo-3-dimension@7c7f443f0936949c20b18f812683c7b870666845/hmmg_layoutTransition.css" rel="stylesheet" type="text/css" />
-    <link href="https://cdn.jsdelivr.net/gh/genizy/ovo-3-dimension@7c7f443f0936949c20b18f812683c7b870666845/jquery.gritter.css" rel="stylesheet" type="text/css" />
-</head>
+	
+	<link href="https://cdn.jsdelivr.net/gh/genizy/ovo-3-dimension@ce4e2eb95b5cbefe2d88debb4cf75968eb5e9fd0/animate.css" rel="stylesheet" type="text/css" />
+	<link href="https://cdn.jsdelivr.net/gh/genizy/ovo-3-dimension@ce4e2eb95b5cbefe2d88debb4cf75968eb5e9fd0/hmmg_layoutTransition.css" rel="stylesheet" type="text/css" />
+	<link href="https://cdn.jsdelivr.net/gh/genizy/ovo-3-dimension@ce4e2eb95b5cbefe2d88debb4cf75968eb5e9fd0/jquery.gritter.css" rel="stylesheet" type="text/css" />
 
-<body>
-    <div id="fb-root"></div>
-    <div id="c2canvasdiv">
-        <canvas id="c2canvas" width="1920" height="1080">
-        <h1>Your browser does not appear to support HTML5. Try upgrading your browser to the latest version. <a href="https://www.whatbrowser.org">What is a browser?</a>
-            <br/><br/><a href="https://www.microsoft.com/windows/internet-explorer/default.aspx">Microsoft Internet
-                Explorer</a><br/>
-            <a href="https://www.mozilla.com/firefox/">Mozilla Firefox</a><br/>
-            <a href="https://www.google.com/chrome/">Google Chrome</a><br/>
-            <a href="https://www.apple.com/safari/download/">Apple Safari</a></h1>
-    </canvas>
+</head> 
+ 
+<body> 
+	<div id="fb-root"></div>
+	
+	<script>
+	// Issue a warning if trying to preview an exported project on disk.
+	(function(){
+		// Check for running exported on file protocol
+		if (window.location.protocol.substr(0, 4) === "file")
+		{
+			alert("Exported games won't work until you upload them. (When running on the file:/// protocol, browsers block many features from working for security reasons.)");
+		}
+	})();
+	</script>
+	
+	<!-- The canvas must be inside a div called c2canvasdiv -->
+	<div id="c2canvasdiv">
+	
+		<!-- The canvas the project will render to.  If you change its ID, don't forget to change the
+		ID the runtime looks for in the jQuery events above (ready() and cr_sizeCanvas()). -->
+		<canvas id="c2canvas" width="1920" height="1080">
+			<!-- This text is displayed if the visitor's browser does not support HTML5.
+			You can change it, but it is a good idea to link to a description of a browser
+			and provide some links to download some popular HTML5-compatible browsers. -->
+			<h1>Your browser does not appear to support HTML5.  Try upgrading your browser to the latest version.  <a href="http://www.whatbrowser.org">What is a browser?</a>
+			<br/><br/><a href="http://www.microsoft.com/windows/internet-explorer/default.aspx">Microsoft Internet Explorer</a><br/>
+			<a href="http://www.mozilla.com/firefox/">Mozilla Firefox</a><br/>
+			<a href="http://www.google.com/chrome/">Google Chrome</a><br/>
+			<a href="http://www.apple.com/safari/download/">Apple Safari</a></h1>
+		</canvas>
+		
+	</div>
+	
+	<!-- Pages load faster with scripts at the bottom -->
+	
+	<!-- Construct 2 exported games require jQuery. -->
+	<script src="https://cdn.jsdelivr.net/gh/genizy/ovo-3-dimension@ce4e2eb95b5cbefe2d88debb4cf75968eb5e9fd0/jquery-3.4.1.min.js"></script>
 
-    </div>
-    <script src="https://cdn.jsdelivr.net/gh/genizy/ovo-3-dimension@7c7f443f0936949c20b18f812683c7b870666845/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/genizy/ovo-3-dimension@7c7f443f0936949c20b18f812683c7b870666845/GameAnalytics.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/genizy/ovo-3-dimension@7c7f443f0936949c20b18f812683c7b870666845/Tween.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/genizy/ovo-3-dimension@7c7f443f0936949c20b18f812683c7b870666845/html2canvas.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/genizy/ovo-3-dimension@7c7f443f0936949c20b18f812683c7b870666845/jquery.gritter.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/genizy/ovo-3-dimension@7c7f443f0936949c20b18f812683c7b870666845/howler.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/genizy/ovo-3-dimension@94092110eab80ddf83bf998c16324ddc052a6c71/c2runtime.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/genizy/ovo-3-dimension@ce4e2eb95b5cbefe2d88debb4cf75968eb5e9fd0/Tween.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/genizy/ovo-3-dimension@ce4e2eb95b5cbefe2d88debb4cf75968eb5e9fd0/html2canvas.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/genizy/ovo-3-dimension@ce4e2eb95b5cbefe2d88debb4cf75968eb5e9fd0/jquery.gritter.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/genizy/ovo-3-dimension@ce4e2eb95b5cbefe2d88debb4cf75968eb5e9fd0/howler.js"></script>
+
+	
+    <!-- The runtime script.  You can rename it, but don't forget to rename the reference here as well.
+    This file will have been minified and obfuscated if you enabled "Minify script" during export. -->
+	<script src="https://cdn.jsdelivr.net/gh/genizy/ovo-3-dimension@ce4e2eb95b5cbefe2d88debb4cf75968eb5e9fd0/c2runtime.js"></script>
 
     <script>
-        jQuery(document).ready(function() {
-            cr_createRuntime("c2canvas");
-        });
-        function onVisibilityChanged() {
-            if (document.hidden || document.mozHidden || document.webkitHidden || document.msHidden)
-                cr_setSuspended(true);
-            else
-                cr_setSuspended(false);
-        };
-        document.addEventListener("visibilitychange", onVisibilityChanged, false);
-        document.addEventListener("mozvisibilitychange", onVisibilityChanged, false);
-        document.addEventListener("webkitvisibilitychange", onVisibilityChanged, false);
-        document.addEventListener("msvisibilitychange", onVisibilityChanged, false);
-        function OnRegisterSWError(e) {
-            console.warn("Failed to register service worker: ", e);
-        };
-        window.C2_RegisterSW = function C2_RegisterSW() {
-            if (!navigator.serviceWorker)
-                return;
-
-            try {
-                navigator.serviceWorker.register("https://cdn.jsdelivr.net/gh/genizy/ovo-3-dimension@ce4e2eb95b5cbefe2d88debb4cf75968eb5e9fd0/sw.js", {
-                        scope: "./"
-                    })
-                    .then(function(reg) {
-                        console.log("Registered service worker on " + reg.scope);
-                    })
-                    .catch(OnRegisterSWError);
-            } catch (e) {
-                OnRegisterSWError(e);
-            }
-        };
+		// Start the Construct 2 project running on window load.
+		jQuery(document).ready(function ()
+		{			
+			// Create new runtime using the c2canvas
+			cr_createRuntime("c2canvas");
+		});
+		
+		// Pause and resume on page becoming visible/invisible
+		function onVisibilityChanged() {
+			if (document.hidden || document.mozHidden || document.webkitHidden || document.msHidden)
+				cr_setSuspended(true);
+			else
+				cr_setSuspended(false);
+		};
+		
+		document.addEventListener("visibilitychange", onVisibilityChanged, false);
+		document.addEventListener("mozvisibilitychange", onVisibilityChanged, false);
+		document.addEventListener("webkitvisibilitychange", onVisibilityChanged, false);
+		document.addEventListener("msvisibilitychange", onVisibilityChanged, false);
+		
+		function OnRegisterSWError(e)
+		{
+			console.warn("Failed to register service worker: ", e);
+		};
+		
+		// Runtime calls this global method when ready to start caching (i.e. after startup).
+		// This registers the service worker which caches resources for offline support.
+		window.C2_RegisterSW = function C2_RegisterSW()
+		{
+			if (!navigator.serviceWorker)
+				return;		// no SW support, ignore call
+			
+			try {
+				navigator.serviceWorker.register("https://cdn.jsdelivr.net/gh/genizy/ovo-3-dimension@ce4e2eb95b5cbefe2d88debb4cf75968eb5e9fd0/sw.js", { scope: "./" })
+				.then(function (reg)
+				{
+					console.log("Registered service worker on " + reg.scope);
+				})
+				.catch(OnRegisterSWError);
+			}
+			catch (e)
+			{
+				OnRegisterSWError(e);
+			}
+		};
     </script>
-</body>
-<script>
-    'undefined' === typeof _trfq || (window._trfq = []);
-    'undefined' === typeof _trfd && (window._trfd = []), _trfd.push({
-        'tccl.baseHost': 'secureserver.net'
-    }, {
-        'ap': 'cpsh-oh'
-    }, {
-        'server': 'p3plzcpnl489510'
-    }, {
-        'dcenter': 'p3'
-    }, {
-        'cp_id': '8465708'
-    }, {
-        'cp_cache': ''
-    }, {
-        'cp_cl': '8'
-    })
-</script>
-</html>
+</body> 
+</html> 
