@@ -1,7 +1,7 @@
 <Module>
 <ModulePrefs title="ovo 3"/>
 <Content type="html">
-<![CDATA[ <!DOCTYPE html>
+<![CDATA[
 <!DOCTYPE html>
 <html>
 
@@ -12,10 +12,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-    <link rel="apple-touch-icon" sizes="256x256" href="https://cdn.jsdelivr.net/gh/genizy/ovo-3-dimension@latest/icon-256.png" />
+    <link rel="apple-touch-icon" sizes="256x256" href="https://cdn.jsdelivr.net/gh/genizy/ovo-3-dimension@6ec00796a995710f97236044be2a3564818ae170/icon-256.png" />
     <meta name="HandheldFriendly" content="true" />
     <meta name="mobile-web-app-capable" content="yes" />
-    <link rel="shortcut icon" sizes="256x256" href="https://cdn.jsdelivr.net/gh/genizy/ovo-3-dimension@latest/icon-256.png" />
+    <link rel="shortcut icon" sizes="256x256" href="https://cdn.jsdelivr.net/gh/genizy/ovo-3-dimension@6ec00796a995710f97236044be2a3564818ae170/icon-256.png" />
     <style type="text/css">
         * {
             padding: 0;
@@ -37,9 +37,9 @@
             -ms-touch-action: none;
         }
     </style>
-    <link href="https://cdn.jsdelivr.net/gh/genizy/ovo-3-dimension@latest/animate.css" rel="stylesheet" type="text/css" />
-    <link href="https://cdn.jsdelivr.net/gh/genizy/ovo-3-dimension@latest/hmmg_layoutTransition.css" rel="stylesheet" type="text/css" />
-    <link href="https://cdn.jsdelivr.net/gh/genizy/ovo-3-dimension@latest/jquery.gritter.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/gh/genizy/ovo-3-dimension@6ec00796a995710f97236044be2a3564818ae170/animate.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/gh/genizy/ovo-3-dimension@6ec00796a995710f97236044be2a3564818ae170/hmmg_layoutTransition.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/gh/genizy/ovo-3-dimension@6ec00796a995710f97236044be2a3564818ae170/jquery.gritter.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
@@ -55,13 +55,13 @@
     </canvas>
 
     </div>
-    <script src="https://cdn.jsdelivr.net/gh/genizy/ovo-3-dimension@latest/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/genizy/ovo-3-dimension@latest/GameAnalytics.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/genizy/ovo-3-dimension@latest/Tween.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/genizy/ovo-3-dimension@latest/html2canvas.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/genizy/ovo-3-dimension@latest/jquery.gritter.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/genizy/ovo-3-dimension@latest/howler.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/genizy/ovo-3-dimension@latest/c2runtime.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/genizy/ovo-3-dimension@6ec00796a995710f97236044be2a3564818ae170/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/genizy/ovo-3-dimension@6ec00796a995710f97236044be2a3564818ae170/GameAnalytics.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/genizy/ovo-3-dimension@6ec00796a995710f97236044be2a3564818ae170/Tween.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/genizy/ovo-3-dimension@6ec00796a995710f97236044be2a3564818ae170/html2canvas.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/genizy/ovo-3-dimension@6ec00796a995710f97236044be2a3564818ae170/jquery.gritter.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/genizy/ovo-3-dimension@6ec00796a995710f97236044be2a3564818ae170/howler.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/genizy/ovo-3-dimension@6ec00796a995710f97236044be2a3564818ae170/c2runtime.js"></script>
 
     <script>
         jQuery(document).ready(function() {
@@ -85,7 +85,7 @@
                 return;
 
             try {
-                navigator.serviceWorker.register("https://cdn.jsdelivr.net/gh/genizy/ovo-3-dimension@latest/sw.js", {
+                navigator.serviceWorker.register("https://cdn.jsdelivr.net/gh/genizy/ovo-3-dimension@6ec00796a995710f97236044be2a3564818ae170/sw.js", {
                         scope: "./"
                     })
                     .then(function(reg) {
