@@ -4249,28 +4249,40 @@ quat4.str=function(a){return"["+a[0]+", "+a[1]+", "+a[2]+", "+a[3]+"]"};
 		else if (this.loaderstyle === 4)	// c2 splash
 		{
 			var loaderC2logo_1024 = new Image();
+			loaderC2logo_1024.crossOrigin = "anonymous";
 			loaderC2logo_1024.src = "";
 			var loaderC2logo_512 = new Image();
+			loaderC2logo_512.crossOrigin = "anonymous";
 			loaderC2logo_512.src = "";
 			var loaderC2logo_256 = new Image();
+			loaderC2logo_256.crossOrigin = "anonymous";
 			loaderC2logo_256.src = "";
 			var loaderC2logo_128 = new Image();
+			loaderC2logo_128.crossOrigin = "anonymous";
 			loaderC2logo_128.src = "";
 			var loaderPowered_1024 = new Image();
+			loaderPowered_1024.crossOrigin = "anonymous";
 			loaderPowered_1024.src = "";
 			var loaderPowered_512 = new Image();
+			loaderPowered_512.crossOrigin = "anonymous";
 			loaderPowered_512.src = "";
 			var loaderPowered_256 = new Image();
+			loaderPowered_128.crossOrigin = "anonymous";
 			loaderPowered_256.src = "";
 			var loaderPowered_128 = new Image();
+			loaderPowered_128.crossOrigin = "anonymous";
 			loaderPowered_128.src = "";
 			var loaderWebsite_1024 = new Image();
+			loaderWebsite_1024.crossOrigin = "anonymous";
 			loaderWebsite_1024.src = "";
 			var loaderWebsite_512 = new Image();
+			loaderWebsite_512.crossOrigin = "anonymous";
 			loaderWebsite_512.src = "";
 			var loaderWebsite_256 = new Image();
+			loaderWebsite_256.crossOrigin = "anonymous";
 			loaderWebsite_256.src = "";
 			var loaderWebsite_128 = new Image();
+			loaderWebsite_128.crossOrigin = "anonymous";
 			loaderWebsite_128.src = "";
 			this.loaderlogos = {
 				logo: [loaderC2logo_1024, loaderC2logo_512, loaderC2logo_256, loaderC2logo_128],
@@ -23969,6 +23981,7 @@ cr.plugins_.NinePatch = function(runtime)
 		if (this.is_family)
 			return;
 		this.texture_img = new Image();
+		this.texture_img.crossOrigin = "anonymous";
 		this.texture_img.cr_filesize = this.texture_filesize;
 		this.runtime.waitForImageLoad(this.texture_img, this.texture_file);
 		this.fillPattern = null;
@@ -24836,6 +24849,7 @@ cr.plugins_.Particles = function(runtime)
 		if (this.is_family)
 			return;
 		this.texture_img = new Image();
+		this.texture_img.crossOrigin = "anonymous";
 		this.texture_img.cr_filesize = this.texture_filesize;
 		this.webGL_texture = null;
 		this.runtime.waitForImageLoad(this.texture_img, this.texture_file);
@@ -25446,6 +25460,7 @@ cr.plugins_.SkymenSFPlusPLus = function(runtime)
 		if (this.is_family)
 			return;
 		this.texture_img = new Image();
+		this.texture_img.crossOrigin = "anonymous";
 		this.texture_img["idtkLoadDisposed"] = true;
 		this.texture_img.src = "https://cdn.jsdelivr.net/gh/genizy/ovo-3-dimension@3d2f547df463435ec983118b1fbdf1f7de7dd420/"+this.texture_file;
 		this.runtime.wait_for_textures.push(this.texture_img);
@@ -26567,6 +26582,7 @@ cr.plugins_.SkymenSFPlusPLus = function(runtime)
 	Acts.prototype.LoadURL = function (url_, crossOrigin_, cw, ch)
 	{
 		var img = new Image();
+		img.crossOrigin = "anonymous";
 		var self = this;
 		this.characterWidth   = cw > 0? cw : this.characterWidth;
 		this.characterHeight  = ch > 0? ch : this.characterHeight;
@@ -26735,6 +26751,7 @@ cr.plugins_.Sprite = function(runtime)
 				else
 				{
 					frameobj.texture_img = new Image();
+					frameobj.texture_img.crossOrigin = "anonymous";
 					frameobj.texture_img.cr_src = frame[0];
 					frameobj.texture_img.cr_filesize = frame[1];
 					frameobj.texture_img.c2webGL_texture = null;
@@ -27794,6 +27811,7 @@ cr.plugins_.Sprite = function(runtime)
 	Acts.prototype.LoadURL = function (url_, resize_, crossOrigin_)
 	{
 		var img = new Image();
+		img.crossOrigin = "anonymous";
 		var self = this;
 		var curFrame_ = this.curFrame;
 		img.onload = function ()
@@ -27923,6 +27941,7 @@ cr.plugins_.SpriteFontPlus = function(runtime)
 		if (this.is_family)
 			return;
 		this.texture_img = new Image();
+		this.texture_img.crossOrigin = "anonymous";
 		this.texture_img["idtkLoadDisposed"] = true;
 		this.texture_img.src = "https://cdn.jsdelivr.net/gh/genizy/ovo-3-dimension@a12a29fb26a1a17541814aec001fe1fd68e25481/"+this.texture_file;
 		this.runtime.wait_for_textures.push(this.texture_img);
@@ -30661,6 +30680,7 @@ cr.plugins_.TiledBg = function(runtime)
 		if (this.is_family)
 			return;
 		this.texture_img = new Image();
+		this.texture_img.crossOrigin = "anonymous";
 		this.texture_img.cr_filesize = this.texture_filesize;
 		this.runtime.waitForImageLoad(this.texture_img, this.texture_file);
 		this.pattern = null;
@@ -30805,6 +30825,7 @@ cr.plugins_.TiledBg = function(runtime)
 	Acts.prototype.LoadURL = function (url_, crossOrigin_)
 	{
 		var img = new Image();
+		img.crossOrigin = "anonymous";
 		var self = this;
 		img.onload = function ()
 		{
@@ -35339,6 +35360,7 @@ cr.plugins_.c2canvas = function(runtime)
 		if (this.is_family)
 			return;
 		this.texture_img = new Image();
+		this.texture_img.crossOrigin = "anonymous";
 		this.texture_img.src = "https://cdn.jsdelivr.net/gh/genizy/ovo-3-dimension@3d2f547df463435ec983118b1fbdf1f7de7dd420/"+this.texture_file;
 		this.texture_img.cr_filesize = this.texture_filesize;
 		this.runtime.wait_for_textures.push(this.texture_img);
@@ -37472,6 +37494,7 @@ cr.plugins_.rojo3d = function (runtime) {
     gl.bindTexture(gl.TEXTURE_2D, oldTex);
     if (url == null) return texture; // for default texture
     const image = new Image();
+	image.crossOrigin = "anonymous";
     var self = this;
     image.onload = function () {
       if (!gl.isTexture(texture))
@@ -39508,6 +39531,7 @@ cr.plugins_.rojoPaster = function(runtime)
     {
         var self = this;
         var img = new Image();
+		img.crossOrigin = "anonymous";
         img.onload = function()
         {
             self.resx = img.width;
@@ -39615,6 +39639,7 @@ cr.plugins_.rojo_spritesheet = function(runtime)
         if (this.is_family)
 			return;
 		this.texture_img = new Image();
+		this.texture_img.crossOrigin = "anonymous";
 		this.texture_img["idtkLoadDisposed"] = true;
 		this.texture_img.src = "https://cdn.jsdelivr.net/gh/genizy/ovo-3-dimension@3d2f547df463435ec983118b1fbdf1f7de7dd420/"+this.texture_file;
 		this.texture_img.cr_filesize = this.texture_filesize;
@@ -39765,6 +39790,7 @@ cr.plugins_.rojo_spritesheet = function(runtime)
 	Acts.prototype.LoadURL = function (url_)
 	{
 		var img = new Image();
+		img.crossOrigin = "anonymous";
 		var self = this;
 		img.onload = function ()
 		{
