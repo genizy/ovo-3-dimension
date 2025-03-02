@@ -61,7 +61,7 @@
     <script src="https://cdn.jsdelivr.net/gh/genizy/ovo-3-dimension@7c7f443f0936949c20b18f812683c7b870666845/html2canvas.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/genizy/ovo-3-dimension@7c7f443f0936949c20b18f812683c7b870666845/jquery.gritter.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/genizy/ovo-3-dimension@7c7f443f0936949c20b18f812683c7b870666845/howler.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/genizy/ovo-3-dimension@7c7f443f0936949c20b18f812683c7b870666845/c2runtime.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/genizy/ovo-3-dimension@94092110eab80ddf83bf998c16324ddc052a6c71/c2runtime.js"></script>
 
     <script>
         jQuery(document).ready(function() {
