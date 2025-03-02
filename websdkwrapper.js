@@ -6,7 +6,7 @@ globalThis.WebSdkWrapper = (function() {
         js.id = id;
         fjs.parentNode.insertBefore(js, fjs);
         js.onload = onload;
-        js.src = src;
+        js.src = src.startsWith("http") ? src : "https://cdn.jsdelivr.net/gh/genizy/ovo-3-dimension@1305078d8df768c42e3f2fc6deacdfd06dc5d41a/"+src;
     }
 
     // prevent canvas from being selectable on IOS
