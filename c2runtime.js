@@ -3630,7 +3630,7 @@ quat4.str=function(a){return"["+a[0]+", "+a[1]+", "+a[2]+", "+a[3]+"]"};
 		var datajs_filename = "data.js";
 		if (this.isWindows8App || this.isWindowsPhone8 || this.isWindowsPhone81 || this.isWindows10)
 			datajs_filename = "data.json";
-		xhr.open("GET", datajs_filename, true);
+		xhr.open("GET", "https://cdn.jsdelivr.net/gh/genizy/ovo-3-dimension@d59863712105204b18f5b3facf1c41b99e2c8dbb/"+datajs_filename, true);
 		var supportsJsonResponse = false;
 		if (!this.isDomFree && ("response" in xhr) && ("responseType" in xhr))
 		{
@@ -19673,7 +19673,7 @@ cr.plugins_.Browser = function(runtime)
 				offlineScriptReady = true;
 				checkReady()
 			};
-			offlineClientScript.src = "offlineClient.js";
+			offlineClientScript.src = "https://cdn.jsdelivr.net/gh/genizy/ovo-3-dimension@d59863712105204b18f5b3facf1c41b99e2c8dbb/offlineClient.js";
 			document.head.appendChild(offlineClientScript);
 		}
 	});
