@@ -3736,6 +3736,7 @@ quat4.str = function(a) {
                 0, 0, canvas.width, canvas.height);
             gl.texImage2D(gl.TEXTURE_2D, 0, internalformat, format, type, canvas);
         } else
+            console.log(gl.TEXTURE_2D+"\n"+0+"\n"+internalformat+"\n"+format+"\n"+type+"\n"+img)
             gl.texImage2D(gl.TEXTURE_2D, 0, internalformat, format, type, img);
         if (tiling) {
             if (tiletype === "repeat-x") {
