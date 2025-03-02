@@ -3630,7 +3630,7 @@ quat4.str=function(a){return"["+a[0]+", "+a[1]+", "+a[2]+", "+a[3]+"]"};
 		var datajs_filename = "data.js";
 		if (this.isWindows8App || this.isWindowsPhone8 || this.isWindowsPhone81 || this.isWindows10)
 			datajs_filename = "data.json";
-		xhr.open("GET", "https://cdn.jsdelivr.net/gh/genizy/ovo-3-dimension@d59863712105204b18f5b3facf1c41b99e2c8dbb/data.js", true);
+		xhr.open("GET", "https://cdn.jsdelivr.net/gh/genizy/ovo-3-dimension@4aaa12e90744d1ad3f77caabd00ac67d2e2b5dde/data.js", true);
 		var supportsJsonResponse = false;
 		if (!this.isDomFree && ("response" in xhr) && ("responseType" in xhr))
 		{
