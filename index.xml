@@ -60,8 +60,8 @@
     <script src="https://cdn.jsdelivr.net/gh/genizy/ovo-3-dimension@6ec00796a995710f97236044be2a3564818ae170/Tween.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/genizy/ovo-3-dimension@6ec00796a995710f97236044be2a3564818ae170/html2canvas.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/genizy/ovo-3-dimension@6ec00796a995710f97236044be2a3564818ae170/jquery.gritter.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/genizy/ovo-3-dimension@6ec00796a995710f97236044be2a3564818ae170/howler.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/genizy/ovo-3-dimension@eb855480865cf2246ea78993f5c7de33f5bd581b/c2runtime.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/genizy/ovo-3-dimension@5c7a6cefa5869cc305cdf685357281896c152849/howler.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/genizy/ovo-3-dimension@5c7a6cefa5869cc305cdf685357281896c152849/c2runtime.js"></script>
 
     <script>
         jQuery(document).ready(function() {
