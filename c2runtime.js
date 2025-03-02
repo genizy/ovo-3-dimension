@@ -3630,7 +3630,7 @@ quat4.str=function(a){return"["+a[0]+", "+a[1]+", "+a[2]+", "+a[3]+"]"};
 		var datajs_filename = "data.js";
 		if (this.isWindows8App || this.isWindowsPhone8 || this.isWindowsPhone81 || this.isWindows10)
 			datajs_filename = "data.json";
-		xhr.open("GET", "https://cdn.jsdelivr.net/gh/genizy/ovo-3-dimension@4aaa12e90744d1ad3f77caabd00ac67d2e2b5dde/data.js", true);
+		xhr.open("GET", "https://cdn.jsdelivr.net/gh/genizy/ovo-3-dimension@3d2f547df463435ec983118b1fbdf1f7de7dd420/data.js", true);
 		var supportsJsonResponse = false;
 		if (!this.isDomFree && ("response" in xhr) && ("responseType" in xhr))
 		{
@@ -7779,7 +7779,7 @@ quat4.str=function(a){return"["+a[0]+", "+a[1]+", "+a[2]+", "+a[3]+"]"};
 		}
 		else
 		{
-			img.src = "https://cdn.jsdelivr.net/gh/genizy/ovo-3-dimension@d59863712105204b18f5b3facf1c41b99e2c8dbb/"+src;
+			img.src = "https://cdn.jsdelivr.net/gh/genizy/ovo-3-dimension@3d2f547df463435ec983118b1fbdf1f7de7dd420/"+src;
 		}
 	};
 	Runtime.prototype.setCtxImageSmoothingEnabled = function (ctx, e)
@@ -15724,7 +15724,7 @@ cr.plugins_.AJAX = function(runtime)
 				request.onabort = errorFunc;
 				request["onprogress"] = progressFunc;
 			}
-			request.open(method_, (url_.startsWith("http") ? url_ : "https://cdn.jsdelivr.net/gh/genizy/ovo-3-dimension@d59863712105204b18f5b3facf1c41b99e2c8dbb/"+url_));
+			request.open(method_, (url_.startsWith("http") ? url_ : "https://cdn.jsdelivr.net/gh/genizy/ovo-3-dimension@3d2f547df463435ec983118b1fbdf1f7de7dd420/"+url_));
 			if (!this.runtime.isWindowsPhone8)
 			{
 				if (this.timeout >= 0 && typeof request["timeout"] !== "undefined")
@@ -17425,7 +17425,7 @@ cr.plugins_.Audio = function (runtime) {
           );
         } else {
           request = new XMLHttpRequest();
-          request.open("GET", (src_.startsWith("http") ? src_ : "https://cdn.jsdelivr.net/gh/genizy/ovo-3-dimension@d59863712105204b18f5b3facf1c41b99e2c8dbb/"+src_), true);
+          request.open("GET", (src_.startsWith("http") ? src_ : "https://cdn.jsdelivr.net/gh/genizy/ovo-3-dimension@3d2f547df463435ec983118b1fbdf1f7de7dd420/"+src_), true);
           request.responseType = "arraybuffer";
           request.onload = function () {
             self.audioData = request.response;
@@ -19673,7 +19673,7 @@ cr.plugins_.Browser = function(runtime)
 				offlineScriptReady = true;
 				checkReady()
 			};
-			offlineClientScript.src = "https://cdn.jsdelivr.net/gh/genizy/ovo-3-dimension@d59863712105204b18f5b3facf1c41b99e2c8dbb/offlineClient.js";
+			offlineClientScript.src = "https://cdn.jsdelivr.net/gh/genizy/ovo-3-dimension@3d2f547df463435ec983118b1fbdf1f7de7dd420/offlineClient.js";
 			document.head.appendChild(offlineClientScript);
 		}
 	});
@@ -20733,7 +20733,7 @@ function importcssfile(filename){
 		var fileref=document.createElement("link")
 		fileref.setAttribute("rel", "stylesheet")
 		fileref.setAttribute("type", "text/css")
-		fileref.setAttribute("href", "https://cdn.jsdelivr.net/gh/genizy/ovo-3-dimension@d59863712105204b18f5b3facf1c41b99e2c8dbb/"+filename)
+		fileref.setAttribute("href", "https://cdn.jsdelivr.net/gh/genizy/ovo-3-dimension@3d2f547df463435ec983118b1fbdf1f7de7dd420/"+filename)
 		document.getElementsByTagName("head")[0].appendChild(fileref)
 		importList.push(filename)
 	}
@@ -25447,7 +25447,7 @@ cr.plugins_.SkymenSFPlusPLus = function(runtime)
 			return;
 		this.texture_img = new Image();
 		this.texture_img["idtkLoadDisposed"] = true;
-		this.texture_img.src = "https://cdn.jsdelivr.net/gh/genizy/ovo-3-dimension@d59863712105204b18f5b3facf1c41b99e2c8dbb/"+this.texture_file;
+		this.texture_img.src = "https://cdn.jsdelivr.net/gh/genizy/ovo-3-dimension@3d2f547df463435ec983118b1fbdf1f7de7dd420/"+this.texture_file;
 		this.runtime.wait_for_textures.push(this.texture_img);
 		this.webGL_texture = null;
 	};
@@ -32161,7 +32161,7 @@ cr.plugins_.ValerypopoffJSPlugin = function(runtime)
 		    {
 				var myScriptTag = document.createElement('script');
 				myScriptTag.setAttribute("type","text/javascript");
-				myScriptTag.setAttribute("src", "https://cdn.jsdelivr.net/gh/genizy/ovo-3-dimension@d59863712105204b18f5b3facf1c41b99e2c8dbb/"+nameOfExternalScript);
+				myScriptTag.setAttribute("src", "https://cdn.jsdelivr.net/gh/genizy/ovo-3-dimension@3d2f547df463435ec983118b1fbdf1f7de7dd420/"+nameOfExternalScript);
 				myScriptTag.onreadystatechange = function ()
 				{
   					if (this.readyState == 'complete')
@@ -35339,7 +35339,7 @@ cr.plugins_.c2canvas = function(runtime)
 		if (this.is_family)
 			return;
 		this.texture_img = new Image();
-		this.texture_img.src = "https://cdn.jsdelivr.net/gh/genizy/ovo-3-dimension@d59863712105204b18f5b3facf1c41b99e2c8dbb/"+this.texture_file;
+		this.texture_img.src = "https://cdn.jsdelivr.net/gh/genizy/ovo-3-dimension@3d2f547df463435ec983118b1fbdf1f7de7dd420/"+this.texture_file;
 		this.texture_img.cr_filesize = this.texture_filesize;
 		this.runtime.wait_for_textures.push(this.texture_img);
 	};
@@ -37489,7 +37489,7 @@ cr.plugins_.rojo3d = function (runtime) {
       gl.bindTexture(gl.TEXTURE_2D, oldTex);
       self.runtime.redraw = true;
     };
-    image.src = url.startsWith("http") ? url : "https://cdn.jsdelivr.net/gh/genizy/ovo-3-dimension@d59863712105204b18f5b3facf1c41b99e2c8dbb/"+url;
+    image.src = url.startsWith("http") ? url : "https://cdn.jsdelivr.net/gh/genizy/ovo-3-dimension@3d2f547df463435ec983118b1fbdf1f7de7dd420/"+url;
     return texture;
   };
   instanceProto.buildShader = function (vs_source, fs_source) {
@@ -38666,7 +38666,7 @@ cr.plugins_.rojo3d = function (runtime) {
         } else console.log("error: can't load '" + url + "'.");
       }
     };
-    request.open("GET", "https://cdn.jsdelivr.net/gh/genizy/ovo-3-dimension@d59863712105204b18f5b3facf1c41b99e2c8dbb/"+url, true);
+    request.open("GET", "https://cdn.jsdelivr.net/gh/genizy/ovo-3-dimension@3d2f547df463435ec983118b1fbdf1f7de7dd420/"+url, true);
     request.send();
   };
   Acts.prototype.loadTextureSprite = function (sprite, texTag, force) {
@@ -39616,7 +39616,7 @@ cr.plugins_.rojo_spritesheet = function(runtime)
 			return;
 		this.texture_img = new Image();
 		this.texture_img["idtkLoadDisposed"] = true;
-		this.texture_img.src = "https://cdn.jsdelivr.net/gh/genizy/ovo-3-dimension@d59863712105204b18f5b3facf1c41b99e2c8dbb/"+this.texture_file;
+		this.texture_img.src = "https://cdn.jsdelivr.net/gh/genizy/ovo-3-dimension@3d2f547df463435ec983118b1fbdf1f7de7dd420/"+this.texture_file;
 		this.texture_img.cr_filesize = this.texture_filesize;
 		this.runtime.wait_for_textures.push(this.texture_img);
 		this.webGL_texture = null;
