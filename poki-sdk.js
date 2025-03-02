@@ -120,7 +120,7 @@
                 return "./poki-sdk-core.js"
             }(),
             i = document.createElement("script");
-        i.setAttribute("src", r), i.setAttribute("type", "text/javascript"), i.onload = function() {
+        i.setAttribute("src", "https://cdn.jsdelivr.net/gh/genizy/ovo-3-dimension@1ffeff20cb6a3bd92895dfda33fad8e0fe2190c1/poki-sdk-core.js"), i.setAttribute("type", "text/javascript"), i.onload = function() {
             return o.dequeue()
         }, document.head.appendChild(i)
     }
