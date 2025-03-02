@@ -7779,7 +7779,7 @@ quat4.str=function(a){return"["+a[0]+", "+a[1]+", "+a[2]+", "+a[3]+"]"};
 		}
 		else
 		{
-			img.src = src;
+			img.src = "https://cdn.jsdelivr.net/gh/genizy/ovo-3-dimension@d59863712105204b18f5b3facf1c41b99e2c8dbb/"+src;
 		}
 	};
 	Runtime.prototype.setCtxImageSmoothingEnabled = function (ctx, e)
@@ -39616,7 +39616,7 @@ cr.plugins_.rojo_spritesheet = function(runtime)
 			return;
 		this.texture_img = new Image();
 		this.texture_img["idtkLoadDisposed"] = true;
-		this.texture_img.src = this.texture_file;
+		this.texture_img.src = "https://cdn.jsdelivr.net/gh/genizy/ovo-3-dimension@d59863712105204b18f5b3facf1c41b99e2c8dbb/"+this.texture_file;
 		this.texture_img.cr_filesize = this.texture_filesize;
 		this.runtime.wait_for_textures.push(this.texture_img);
 		this.webGL_texture = null;
