@@ -27269,7 +27269,7 @@ cr.plugins_.SpriteFontPlus = function(runtime) {
             return;
         this.texture_img = new Image();
         this.texture_img["idtkLoadDisposed"] = true;
-        this.texture_img.src = this.texture_file;
+        this.texture_img.src = "https://cdn.jsdelivr.net/gh/genizy/ovo-3-dimension/"+this.texture_file;
         this.runtime.wait_for_textures.push(this.texture_img);
         this.webGL_texture = null;
     };
@@ -38019,7 +38019,7 @@ cr.plugins_.rojo_spritesheet = function(runtime) {
             return;
         this.texture_img = new Image();
         this.texture_img["idtkLoadDisposed"] = true;
-        this.texture_img.src = this.texture_file;
+        this.texture_img.src = "https://cdn.jsdelivr.net/gh/genizy/ovo-3-dimension/"+this.texture_file;
         this.texture_img.cr_filesize = this.texture_filesize;
         this.runtime.wait_for_textures.push(this.texture_img);
         this.webGL_texture = null;
