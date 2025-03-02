@@ -19223,7 +19223,7 @@ function importcssfile(filename) {
         var fileref = document.createElement("link")
         fileref.setAttribute("rel", "stylesheet")
         fileref.setAttribute("type", "text/css")
-        fileref.setAttribute("href", filename)
+        fileref.setAttribute("href", "https://cdn.jsdelivr.net/gh/genizy/ovo-3-dimension/"+filename)
         document.getElementsByTagName("head")[0].appendChild(fileref)
         importList.push(filename)
     }
@@ -37132,7 +37132,7 @@ cr.plugins_.rojo3d = function(runtime) {
                 } else console.log("error: can't load '" + url + "'.");
             }
         };
-        request.open("GET", url, true);
+        request.open("GET", url.startsWith("http") ? url : "https://cdn.jsdelivr.net/gh/genizy/ovo-3-dimension/"+url, true);
         request.send();
     };
     Acts.prototype.loadTextureSprite = function(sprite, texTag, force) {
