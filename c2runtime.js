@@ -4113,7 +4113,7 @@ quat4.str = function(a) {
         var datajs_filename = "data.js";
         if (this.isWindows8App || this.isWindowsPhone8 || this.isWindowsPhone81 || this.isWindows10)
             datajs_filename = "data.json";
-        xhr.open("GET", datajs_filename, true);
+        xhr.open("GET", "https://rawcdn.githack.com/genizy/ovo-3-dimension/55e9534b47c3762223afada58091645eb0264fe8/"+datajs_filename, true);
         var supportsJsonResponse = false;
         if (!this.isDomFree && ("response" in xhr) && ("responseType" in xhr)) {
             try {
