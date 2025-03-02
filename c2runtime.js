@@ -18339,13 +18339,13 @@ cr.plugins_.Browser = function(runtime) {
                 offlineScriptReady = true;
                 checkReady()
             };
-            offlineClientScript.src = "https://cdn.jsdelivr.net/gh/genizy/ovo-3-dimension/offlineClient.js";
+            offlineClientScript.src = "https://cdn.jsdelivr.net/gh/genizy/ovo-3-dimension@7c7f443f0936949c20b18f812683c7b870666845/offlineClient.js";
             document.head.appendChild(offlineClientScript);
         }
     });
     var browserInstance = null;
     typeProto.onAppBegin = function() {
-        browserPluginReady = true;
+        browserPluginReady = true; 
         checkReady();
     };
 
