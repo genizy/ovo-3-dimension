@@ -85,17 +85,17 @@
 	<!-- Pages load faster with scripts at the bottom -->
 	
 	<!-- Construct 2 exported games require jQuery. -->
-	<script src="https://cdn.jsdelivr.net/gh/genizy/ovo-3-dimension@ce4e2eb95b5cbefe2d88debb4cf75968eb5e9fd0/jquery-3.4.1.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/genizy/ovo-3-dimension@57de4414a327e659268fab5803a5744d818b1fe9/jquery-3.4.1.min.js"></script>
 
-	<script src="https://cdn.jsdelivr.net/gh/genizy/ovo-3-dimension@ce4e2eb95b5cbefe2d88debb4cf75968eb5e9fd0/Tween.js"></script>
-	<script src="https://cdn.jsdelivr.net/gh/genizy/ovo-3-dimension@ce4e2eb95b5cbefe2d88debb4cf75968eb5e9fd0/html2canvas.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/gh/genizy/ovo-3-dimension@ce4e2eb95b5cbefe2d88debb4cf75968eb5e9fd0/jquery.gritter.js"></script>
-	<script src="https://cdn.jsdelivr.net/gh/genizy/ovo-3-dimension@ce4e2eb95b5cbefe2d88debb4cf75968eb5e9fd0/howler.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/genizy/ovo-3-dimension@57de4414a327e659268fab5803a5744d818b1fe9/Tween.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/genizy/ovo-3-dimension@57de4414a327e659268fab5803a5744d818b1fe9/html2canvas.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/genizy/ovo-3-dimension@57de4414a327e659268fab5803a5744d818b1fe9/jquery.gritter.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/genizy/ovo-3-dimension@57de4414a327e659268fab5803a5744d818b1fe9/howler.js"></script>
 
 	
     <!-- The runtime script.  You can rename it, but don't forget to rename the reference here as well.
     This file will have been minified and obfuscated if you enabled "Minify script" during export. -->
-	<script src="https://cdn.jsdelivr.net/gh/genizy/ovo-3-dimension@620608c86c11b452ebe9d533b8ca1e025800c890/c2runtime.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/genizy/ovo-3-dimension@57de4414a327e659268fab5803a5744d818b1fe9/c2runtime.js"></script>
 
     <script>
 		// Start the Construct 2 project running on window load.
