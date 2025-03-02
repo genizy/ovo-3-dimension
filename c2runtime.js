@@ -26689,7 +26689,7 @@ cr.plugins_.Sprite = function(runtime)
 		var anim, frame, animobj, frameobj, wt, uv;
 		this.all_frames = [];
 		this.has_loaded_textures = false;
-		for (i = 0, leni = this.animations.length; i < leni; i++)
+		for (i = 0, leni = (this.animations ? this.animations.length : 0); i < leni; i++)
 		{
 			anim = this.animations[i];
 			animobj = {};
